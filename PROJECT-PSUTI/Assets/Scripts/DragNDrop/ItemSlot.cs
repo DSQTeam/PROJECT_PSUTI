@@ -1,19 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class ItemSlot : MonoBehaviour, IDropHandler
 {
-    private int SlotData;
-
+    [SerializeField] private GameObject otherGameObject;
+    public int SlotData;
+    public int Answer;
     public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log("OnDrop");
+        
+
+       
         if (eventData.pointerDrag != null)
         {
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-            //SlotData = GetComponent<DragNdrop>();
+            otherGameObject = GameObject.Find(eventData.pointerDrag.gameObject.name);
+            SlotData = otherGameObject.GetComponent<DragNdrop>().id;
+            
         }
+
+       
     }
 }

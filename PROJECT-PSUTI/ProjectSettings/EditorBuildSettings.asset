@@ -6,6 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Main Menu.unity
+    guid: c87f41c8da299394e946cb05f91d220e
+  - enabled: 1
+    path: "Assets/Scenes/\u0418\u0412\u0422/Zerocode/Zerocode1.unity"
     guid: 2cda990e2423bbf4892e6590ba056729
-  m_configObjects: {}
+  - enabled: 1
+    path: "Assets/Scenes/\u0418\u0412\u0422/Zerocode/Zerocode2.unity"
+    guid: e6791b013d8cd4041a0a9d367c7c730b
+  - enabled: 1
+    path: "Assets/Scenes/\u0418\u0412\u0422/Zerocode/Zerocode3.unity"
+    guid: 7f903f6ace57f8e488ba1b2a85c30122
+  m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: c63e9ca04e4903e47ab3e93ba62fc966, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: ce7d4aa8da6c0d44bbe41d7280b78585, type: 2}

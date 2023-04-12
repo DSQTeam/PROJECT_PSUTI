@@ -7,20 +7,22 @@ using UnityEngine.EventSystems;
 public class DragNdrop : MonoBehaviour, IPointerDownHandler , IBeginDragHandler , IEndDragHandler , IDragHandler
 {
     [SerializeField] private Canvas canvas;
-    [SerializeField] private int id; 
+    public int id;
+    
 
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
 
-
+    
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
+         
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("OnBeginDrag");
+        
         canvasGroup.alpha = .5f;
         canvasGroup.blocksRaycasts = false;
     }
@@ -32,14 +34,14 @@ public class DragNdrop : MonoBehaviour, IPointerDownHandler , IBeginDragHandler 
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("OnEndDrag");
+        
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("OnPointerDown");
+        
     }
 
     
