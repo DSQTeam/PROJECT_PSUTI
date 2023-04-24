@@ -7,7 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
-    guid: c87f41c8da299394e946cb05f91d220e
+    guid: 384a372c61406a24785bb00c24ee7db2
   - enabled: 1
     path: "Assets/Scenes/\u0418\u0412\u0422/Zerocode/Zerocode1.unity"
     guid: 2cda990e2423bbf4892e6590ba056729
