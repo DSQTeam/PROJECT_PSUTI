@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/\u0418\u0412\u0422/Zerocode/Zerocode3.unity"
     guid: 7f903f6ace57f8e488ba1b2a85c30122
+  - enabled: 1
+    path: "Assets/Scenes/\u0418\u0411/WhackAMole.unity"
+    guid: 0e874ff55ef85df4c9c5fe07f13bd506
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: c63e9ca04e4903e47ab3e93ba62fc966, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 2488258a7bc9cc44795f790e7c49c7fc, type: 2}
