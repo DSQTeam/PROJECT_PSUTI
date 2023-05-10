@@ -95,7 +95,7 @@ public class GameManager : MonoBehaviour {
   public void Missed(int moleIndex, bool isMole) {
     if (isMole) {
       // Decrease time by a little bit.
-      timeRemaining -= 10;
+      timeRemaining -= 4;
     }
     // Remove from active moles.
     currentMoles.Remove(moles[moleIndex]);

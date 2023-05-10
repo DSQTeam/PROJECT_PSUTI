@@ -8,6 +8,7 @@ public class Mole : MonoBehaviour {
   [SerializeField] private Sprite moleHatBroken;
   [SerializeField] private Sprite moleHit;
   [SerializeField] private Sprite moleHatHit;
+  [SerializeField] private Sprite bomb;
 
   [Header("GameManager")]
   [SerializeField] private GameManager gameManager;
@@ -35,7 +36,7 @@ public class Mole : MonoBehaviour {
   public enum MoleType { Standard, HardHat, Bomb };
   private MoleType moleType;
   private float hardRate = 0.25f;
-  private float bombRate = 0f;
+  private float bombRate = 0.1f;
   private int lives;
   private int moleIndex = 0;
 
@@ -161,27 +162,27 @@ public class Mole : MonoBehaviour {
   }
 
   private void CreateNext() {
-    float random = Random.Range(0f, 1f);
-    if (random < bombRate) {
-      // Make a bomb.
-      moleType = MoleType.Bomb;
-      // The animator handles setting the sprite.
-      animator.enabled = true;
-    } else {
-      animator.enabled = false;
-      random = Random.Range(0f, 1f);
+    
+    
+      float random = Random.Range(0f, 1f);
       if (random < hardRate) {
         // Create a hard one.
         moleType = MoleType.HardHat;
         spriteRenderer.sprite = moleHardHat;
         lives = 2;
-      } else {
+      } 
+        else if (random < bombRate)
+        {
+            moleType = MoleType.Bomb;
+            spriteRenderer.sprite = bomb;
+
+        }   else {
         // Create a standard one.
         moleType = MoleType.Standard;
         spriteRenderer.sprite = mole;
         lives = 1;
       }
-    }
+    
     // Mark as hittable so we can register an onclick event.
     hittable = true;
   }
@@ -190,8 +191,8 @@ public class Mole : MonoBehaviour {
   private void SetLevel(int level) {
     // As level increases increse the bomb rate to 0.25 at level 10.
 
-    // поменял спавн бомб на 0
-    bombRate = Mathf.Min(level * 0, 0.2f);
+    
+    bombRate = Mathf.Min(level * 0.1f, 0.35f);
 
     // Increase the amounts of HardHats until 100% at level 40.
     hardRate = Mathf.Min(level * 0.025f, 0.75f);
