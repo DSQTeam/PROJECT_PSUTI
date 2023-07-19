@@ -76,6 +76,12 @@ public class LevelRandom : MonoBehaviour
     {
         InDevTab.SetActive(false);
     }
-    
+
+    public void ScineceWork()
+    {
+
+        SceneManager.LoadScene(5);
+
+    }
 
 }
